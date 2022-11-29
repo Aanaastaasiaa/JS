@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Ex12</title>
+</head> 
+<body> 
+<a href="#" onclick="download_file()"> 
+240 готовых заголовков </a><br>        
+<a id="bg" href="https://xn--5-ctbskp.xn--p1ai/upload/uf/bde/metodichka.pdf?ysclid=lb264gmow6747536430"> ИнжГраф </a>        
+    <script>                    
+    function download_file() {                               
+    if (confirm ('Download file?')) {
+    location.href = 'http://marinaromash.com/pdf/240zagolovkov.pdf';
+    }} 
+
+    document.getElementById("bg").addEventListener("mouseenter", function(event) {
+    document.body.style.backgroundColor = "red";                    
+    }); 
+
+    document.getElementById("bg").addEventListener("mouseleave", function(event) {
+    document.body.style.backgroundColor = "white";
+    });   
+    </script> 
+</body> 
+</html>

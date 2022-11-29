@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>array</title>
+        <script language="JavaScript">
+            function school() {
+            objects=new Array(" русский язык", " литература", " математика", " иностранный язык", " история", " физика", " обществознание", " химия", " биология");
+            humanitarian1=new Array();
+            humanitarian2=new Array();
+            humanitarian3=new Array();
+            humanitarian1=objects.slice(0,2);
+            humanitarian2=objects.slice(3,5);
+            humanitarian3=objects.slice(6,7);
+            Accurate1=new Array();
+            Accurate2=new Array();
+            Accurate3=new Array();
+            Accurate1=objects.slice(2,3);
+            Accurate2=objects.slice(4,5);
+            Accurate3=objects.slice(7,9);
+            document.write("Гуманитарные науки:"+humanitarian1+","+humanitarian2+","+humanitarian3+"<br>"+"Точные науки:"+Accurate1+","+Accurate2+","+Accurate3);
+            }
+        </script>
+</head>
+<body>
+    <script>
+    school()
+    </script>
+</body>
+</html>
