@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Ex14</title>
+
+    <script type="text/javascript">
+    window.addEventListener("load",function(){
+    document.getElementById("send").addEventListener("click",function(){
+        var inp = document.getElementById("names"), 
+        inp1 = document.getElementById("pass1"), 
+        inp2 = document.getElementById("pass2"), 
+        inp3 = document.getElementById("email");
+        inp4 = document.getElementById("message");
+
+    if(inp.value.length<1){
+    inp.value="";
+    alert("Заполните поле имя");
+    }
+
+    if(inp1.value.length<4){
+    inp1.value="";
+    alert("Длина пароля должна быть более 4 символов");
+    }
+
+    if(inp1.value!=inp2.value){
+    inp1.value="";
+    inp2.value="";
+    alert("Пароли не совпадают!");
+    }
+
+    if(inp3.value.length<1){
+    inp3.value="";
+    alert("Email должен содержать более 4 символов");
+    }
+
+    if(!inp3.value.includes('@')){
+    inp3.value="";
+    alert("Email должен содержать символ @");
+    }
+    
+    if(!inp3.value.includes('@')){
+    inp3.value="";
+    alert("Email должен содержать символ @");
+    }
+
+    if(!inp4.value.length<10){
+    inp4.value="";
+    alert("Слишком короткое сообщение (Сообщение должно содержать от 10 символов)");
+    }
+    });
+    })
+    </script>
+</head>
+
+
+<body>
+    <form name="form" onsubmit="return validate()">
+    Ваше имя*<input type="text" name="names" id="names" required><br><br>
+    Пароль*<input type="password" id="pass1" required><br><br>
+    Потверждение пароля*<input type="password" id="pass2" required><br><br>
+    Электронный адрес*<input type="email" id="email" required><br><br>
+    Тема сообщения:*<input type="text"required><br><br>
+    Сообщение:<textarea id="message" cols=16 rows=5 placeholder="Введите сообщение"></textarea><br><br>
+    <input type="button" value="Отправить" id="send"> <input type="reset" value="Очистить форму"><br><br>
+    *-необходимые для заполнения поля
+    </form>
+</body>
+</html>
